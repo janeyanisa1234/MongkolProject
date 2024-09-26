@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #fff9e3; /* สีพื้นหลัง */
+    font-family: 'TH SarabunPSK', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .container {
+    text-align: center;
+    position: relative;
+  }
+  
+  .logo {
+    font-size: 72px;
+    color: #f1aa3e; /* สีตัวอักษร MONGKOL */
+    margin: 20px 0;
+    font-family: 'Sarabun', sans-serif;
+  }
+  
+  .button {
+    background-color: #006953; /* สีพื้นหลังปุ่ม */
+    color: white;
+    padding: 15px 30px;
+    font-size: 24px;
+    text-decoration: none;
+    border-radius: 10px;
+    display: inline-block;
+    margin-top: 20px;
+  }
+  
+  .button span {
+    margin-left: 10px;
+  }
+  
+  .button:hover {
+    background-color: #005342; /* สีปุ่มเมื่อ hover */
+  }
+  
+  .flower-top-left,
+  .flower-bottom-left,
+  .flower-top-right {
+    background-image: url('flower.png'); /* รูปภาพดอกไม้ */
+    position: absolute;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+  
+  .flower-top-left {
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+  }
+  
+  .flower-bottom-left {
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    height: 200px;
+  }
+  
+  .flower-top-right {
+    top: 0;
+    right: 0;
+    width: 200px;
+    height: 200px;
+  }
+  
