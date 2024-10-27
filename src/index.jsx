@@ -1,14 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Monkol from './Monkol';  // การนำเข้าที่แก้ไขสำหรับ Monkol
+import Mongkol from './Mongkol';
 import reportWebVitals from './reportWebVitals';
+import { BrowserRouter } from "react-router-dom";
+import Homepage from './Homepage';
+
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <Monkol />
-  </React.StrictMode>
+  <BrowserRouter>
+    <Mongkol />
+  </BrowserRouter>
 );
 
 // If you want to start measuring performance in your app, pass a function
