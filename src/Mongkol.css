@@ -21,6 +21,20 @@ body {
   font-family: 'Cinzel Decorative', serif;
 }
 
+.logopage {
+  font-size: 30px;
+  color: #f1aa3e;
+  font-family: 'Cinzel Decorative', serif;
+  position: fixed; 
+  top: 0px; 
+  right: 1740px; 
+  display: flex;
+  align-items: center;
+  z-index: 1000; 
+}
+
+
+
 button {
   background-color: #006953;
   /* สีพื้นหลังปุ่ม */

@@ -1,19 +1,16 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, useNavigate, Link, BrowserRouter } from "react-router-dom";
+import { Routes, Route, Link } from "react-router-dom";
 import './Mongkol.css';
-import Homepage from './Homepage.jsx';
+import Homepage from './Homepage';
 import '@fontsource/cinzel-decorative';
 
-
 const App = () => {
-  const navigate = useNavigate();
-
   return (
     <>
       <div className="container">
         <h1 className="logo">M<img src="/Pictures/sparkling.png" alt="Sparkling" width="100px" height="100" />ngkol</h1>
-        <Link to="Homepage">
-          <button onClick={() => navigate('/Homepage')}>เข้าสู่เว็บไซต์ <span>&#9654;</span></button>
+        <Link to="/Homepage">
+          <button>เข้าสู่เว็บไซต์ <span>&#9654;</span></button>
         </Link>
       </div>
       <div>
@@ -24,12 +21,11 @@ const App = () => {
   );
 }
 
-const Main = () => (
-  <BrowserRouter>
-    <Routes>
-      <Route path="/" element={<App />} />
-      <Route path="/Homepage" element={<Homepage />} />
-    </Routes>
-  </BrowserRouter>
+const Mongkol = () => (
+  <Routes>
+    <Route path="/" element={<App />} />
+    <Route path="/Homepage" element={<Homepage />} />
+  </Routes>
 );
-export default App;
+
+export default Mongkol;
