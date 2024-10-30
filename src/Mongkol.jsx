@@ -2,8 +2,8 @@ import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import './Mongkol.css';
 import Homepage from './Homepage';
+import Monday from './Monday';
 import '@fontsource/cinzel-decorative';
-
 
 const App = () => {
   return (
@@ -20,12 +20,13 @@ const App = () => {
       </div>
     </>
   );
-}
+};
 
 const Mongkol = () => (
   <Routes>
     <Route path="/" element={<App />} />
     <Route path="/Homepage" element={<Homepage />} />
+    <Route path="/Monday" element={<Monday />} />
   </Routes>
 );
 
