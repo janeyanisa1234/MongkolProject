@@ -140,3 +140,71 @@ button:hover {
   padding: 10px; 
   text-align: center;
 }
+
+.image-day{
+  position: fixed; 
+  top: 160px; 
+  right: 1200px; 
+  display: flex;
+  align-items: center;
+  z-index: 1000; 
+}
+
+.color-swatch-container {
+  
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Creates 2 equal columns */
+  gap: 20px;
+  padding: 20px;
+  margin : 10px;
+  margin-left: 500px;
+}
+
+.color-swatch {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; /* Aligns content within each item to the right */
+  background-color: #DCC169;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  margin-left: 10px; /* Adds spacing to the left of the circle */
+  background-color: #DCC169;
+}
+
+.text2 {
+  font-size: 16px;
+  text-align: right; /* Aligns text to the right */
+}
+
+.text p {
+  margin: 10px;
+  color: #555;
+}
+
+.text p:first-child {
+  font-weight: bold;
+}
+
+.buttonBack {
+  background-color: #f5e3a7ef;
+  /* สีพื้นหลังปุ่ม */
+  color: rgb(136, 114, 17);
+  font-size: 30px;
+  text-decoration: none;
+  border-radius: 10px;
+  margin-left: 1200px;
+  display: inline-block;
+  font-family: 'TH SarabunPSK', sans-serif;
+  border: white;
+}
+
+h2{
+  color: #EEA31F;
+  font-size: 30px;
+  display: center;
+}
+

@@ -211,6 +211,10 @@ export default function Homepage() {
           </tbody>
         </table>
       </div>
+
+      <div>
+      <h2 >สีมงคลเสริมดวงชะตา ประจำปี 2567 หมอไก่ พ.พาทินี</h2>
+      </div>
     </>
   );
 }
