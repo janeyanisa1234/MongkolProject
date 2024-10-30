@@ -25,12 +25,19 @@ body {
   font-size: 10px;
   color: #f1aa3e;
   font-family: 'Cinzel Decorative', serif;
+  z-index: 1000; 
+  /*
   position: fixed; 
   top: 0px; 
   right: 1380px; 
   display: flex;
   align-items: center;
-  z-index: 1000; 
+*/
+  max-width: 1536px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 button {
@@ -208,3 +215,36 @@ h2{
   display: center;
 }
 
+@media (max-width: 1536px){
+  /*Classname*/
+  .logopage{
+  max-width: 1280px;
+}
+}
+
+/*xl*/
+@media (max-width: 1280px){
+  .logopage{
+     max-width: 1024px;
+  }
+ }
+
+/*lg*/
+@media (max-width: 1024px){
+  .logopage{
+     max-width: 786px;
+  }
+ }
+
+ /*md*/
+@media (max-width: 786px){
+  .logopage{
+     max-width: 640px;
+  }
+ }
+ /*2xl*/
+@media (max-width: 640px){
+  .logopage{
+     max-width: 475px;
+  }
+ }
