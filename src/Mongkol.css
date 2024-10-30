@@ -217,34 +217,44 @@ h2{
 
 @media (max-width: 1536px){
   /*Classname*/
-  .logopage{
+  .logopage,
+  .flower-bottom-left,
+  .flower-top-right{
   max-width: 1280px;
 }
 }
 
 /*xl*/
 @media (max-width: 1280px){
-  .logopage{
+  .logopage,
+  .flower-bottom-left,
+  .flower-top-right{
      max-width: 1024px;
   }
  }
 
 /*lg*/
 @media (max-width: 1024px){
-  .logopage{
+  .logopage,
+  .flower-bottom-left,
+  .flower-top-right{
      max-width: 786px;
   }
  }
 
  /*md*/
 @media (max-width: 786px){
-  .logopage{
+  .logopage,
+  .flower-bottom-left,
+  .flower-top-right{
      max-width: 640px;
   }
  }
  /*2xl*/
 @media (max-width: 640px){
-  .logopage{
+  .logopage,
+  .flower-bottom-left,
+  .flower-top-right{
      max-width: 475px;
   }
  }
