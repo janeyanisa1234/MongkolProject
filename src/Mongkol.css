@@ -2,7 +2,7 @@ body {
   background-color: #fff9e3;
   /* สีพื้นหลัง */
   font-family: 'TH SarabunPSK', sans-serif;
-  display: flex;
+  display: grid;
   justify-content: center;
   align-items: center;
   height: 100vh;
@@ -22,18 +22,16 @@ body {
 }
 
 .logopage {
-  font-size: 30px;
+  font-size: 10px;
   color: #f1aa3e;
   font-family: 'Cinzel Decorative', serif;
   position: fixed; 
   top: 0px; 
-  right: 1740px; 
+  right: 1380px; 
   display: flex;
   align-items: center;
   z-index: 1000; 
 }
-
-
 
 button {
   background-color: #006953;
@@ -47,134 +45,6 @@ button {
   margin-top: 20px;
   font-family: 'TH SarabunPSK', sans-serif;
   border: white;
-}
-
-.buttonMon {
-  background-color: #f0da1a;
-  /* สีพื้นหลังปุ่ม */
-  color: white;
-  padding: 15px 30px;
-  font-size: 30px;
-  text-decoration: none;
-  border-radius: 10px;
-  display: inline-block;
-  margin-top: 20px;
-  font-family: 'TH SarabunPSK', sans-serif;
-  position: fixed; 
-  top: 200px; 
-  right: 1240px; 
-  width: 250px;
-  border: 15px solid rgb(230, 228, 226);
- 
-}
-
-.buttonTue {
-  background-color: #ee53cc;
-  /* สีพื้นหลังปุ่ม */
-  color: white;
-  padding: 15px 30px;
-  font-size: 30px;
-  text-decoration: none;
-  border-radius: 10px;
-  display: inline-block;
-  margin-top: 20px;
-  font-family: 'TH SarabunPSK', sans-serif;
-  position: fixed; 
-  top: 200px; 
-  right: 890px; 
-  width: 250px;
-  border: 15px solid rgb(230, 228, 226);
- 
-}
-
-.buttonWed {
-  background-color: #53ee60;
-  /* สีพื้นหลังปุ่ม */
-  color: white;
-  padding: 15px 30px;
-  font-size: 30px;
-  text-decoration: none;
-  border-radius: 10px;
-  display: inline-block;
-  margin-top: 20px;
-  font-family: 'TH SarabunPSK', sans-serif;
-  position: fixed; 
-  top: 200px; 
-  right: 540px; 
-  width: 250px;
-  border: 15px solid rgb(230, 228, 226);
-}
-
-.buttonThu {
-  background-color: #ff9239;
-  /* สีพื้นหลังปุ่ม */
-  color: white;
-  padding: 15px 30px;
-  font-size: 30px;
-  text-decoration: none;
-  border-radius: 10px;
-  display: inline-block;
-  margin-top: 20px;
-  font-family: 'TH SarabunPSK', sans-serif;
-  position: fixed; 
-  top: 400px; 
-  right: 1450px; 
-  width: 250px;
-  border: 15px solid rgb(230, 228, 226);
-}
-
-.buttonFri {
-  background-color: #39d7ff;
-  /* สีพื้นหลังปุ่ม */
-  color: white;
-  padding: 15px 30px;
-  font-size: 30px;
-  text-decoration: none;
-  border-radius: 10px;
-  display: inline-block;
-  margin-top: 20px;
-  font-family: 'TH SarabunPSK', sans-serif;
-  position: fixed; 
-  top: 400px; 
-  right: 1100px; 
-  width: 250px;
-  border: 15px solid rgb(230, 228, 226);
-}
-
-.buttonSat {
-  background-color: #dc12f7;
-  /* สีพื้นหลังปุ่ม */
-  color: white;
-  padding: 15px 30px;
-  font-size: 30px;
-  text-decoration: none;
-  border-radius: 10px;
-  display: inline-block;
-  margin-top: 20px;
-  font-family: 'TH SarabunPSK', sans-serif;
-  position: fixed; 
-  top: 400px; 
-  right: 730px; 
-  width: 250px;
-  border: 15px solid rgb(230, 228, 226);
-}
-
-.buttonSun {
-  background-color: #f73412;
-  /* สีพื้นหลังปุ่ม */
-  color: white;
-  padding: 15px 30px;
-  font-size: 30px;
-  text-decoration: none;
-  border-radius: 10px;
-  display: inline-block;
-  margin-top: 20px;
-  font-family: 'TH SarabunPSK', sans-serif;
-  position: fixed; 
-  top: 400px; 
-  right: 350px; 
-  width: 250px;
-  border: 15px solid rgb(230, 228, 226);
 }
 
 button span {
@@ -201,7 +71,7 @@ button:hover {
   max-width: 100%;
   position: absolute;
   bottom: -100px;
-  left: -100px;
+  left: -180px;
   margin: 10px;
 
 }
@@ -214,6 +84,59 @@ button:hover {
   max-width: 100%;
   position: absolute;
   top: -100px;
-  right: -200px;
+  right: -250px;
   margin: 10px;
+}
+
+.plain-link {
+  color: inherit;      
+  text-decoration: none; 
+  cursor: pointer; 
+}
+
+.plain-link:hover {
+  text-decoration: underline;
+  color:#005342;
+}
+
+.text:hover{
+  color:#005342;
+}
+
+.days-menu {
+  position: absolute;
+  top: 10px;
+  left: 150px;
+  display: flex; 
+  font-size: 25px;
+  font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+  color: #EEA31F;
+}
+
+.day-options {
+  position: absolute; 
+  top: 120px; 
+  left: 100px; 
+  font-size: 10px;
+  background-color: white;
+  color: #EEA31F;
+  width: 125px;
+  height: 300px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+  font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+}
+
+.table {
+  border: 1px solid lightgray; 
+  border-radius: 8px; 
+  overflow: hidden;
+  font-family: 'IBM Plex Sans Thai Looped', sans-serif;
+}
+
+.table th,
+.table td {
+  border: 1px solid lightgray;
+  padding: 10px; 
+  text-align: center;
 }

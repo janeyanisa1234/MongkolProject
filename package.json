@@ -4,6 +4,9 @@
   "private": true,
   "dependencies": {
     "@fontsource/cinzel-decorative": "^5.1.0",
+    "@fontsource/ibm-plex-sans-thai": "^5.1.0",
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "@fortawesome/react-fontawesome": "^0.2.2",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.4.3",
