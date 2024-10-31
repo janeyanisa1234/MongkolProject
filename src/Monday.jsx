@@ -57,19 +57,21 @@ export default function Monday() {
       </div>
 
       <div className="color-swatch-container">
-        {colorsWithDescriptions.map((item, index) => (
-          <div key={index} className="color-swatch">
-            <div className="text">
-              <p>{item.description}</p>
-              <p>{item.label}</p>
-            </div>
-            <div
-              className="circle"
-              style={{ backgroundColor: item.color }}
-            ></div>
-          </div>
-        ))}
+  {colorsWithDescriptions.map((item, index) => (
+    <div key={index} className="color-swatch">
+      <div className="text">
+        <p style={{ color: item.description === "สีกาลกิณี" ? "red" : "bold" }}>
+          {item.description}
+        </p>
+        <p>{item.label}</p>
       </div>
+      <div
+        className="circle"
+        style={{ backgroundColor: item.color }}
+      ></div>
+    </div>
+  ))}
+</div>
 
       <div>
         <Link to="/Homepage">
