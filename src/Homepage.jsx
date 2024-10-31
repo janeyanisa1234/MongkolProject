@@ -6,6 +6,12 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShirt } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios'; // เพิ่มการ import axios
 import Monday from "./Monday";
+import Tuesday from "./Tuesday";
+import Wednesday from "./Wednesday";
+import Thursday from "./Thursday";
+import Friday from "./Friday";
+import Saturday from "./Saturday";
+import Sunday from "./Sunday";
 
 export default function Homepage() {
   const [showDays, setShowDays] = useState(false);
@@ -13,7 +19,7 @@ export default function Homepage() {
   const [colorMapping, setColorMapping] = useState({});
   const [tableData, setTableData] = useState({});
   
-  const URL = "https://mysterious-coffin-x55qgj67qwwvhv4xj-5000.app.github.dev";
+  const URL = "https://spooky-spooky-werewolf-pjq5w77r5q6hr457-5001.app.github.dev";
 
   useEffect(() => {
     axios.get(`${URL}/tableData`)
@@ -64,22 +70,22 @@ export default function Homepage() {
             <Link to="/Monday" className="plain-link">
               <h1 onClick={toggleDays} className="text">วันจันทร์</h1>
             </Link>
-            <Link to="/Monday" className="plain-link">
+            <Link to="/Tuesday" className="plain-link">
               <h1 onClick={toggleDays} className="text">วันอังคาร</h1>
             </Link>
-            <Link to="/Monday" className="plain-link">
+            <Link to="/Wednesday" className="plain-link">
               <h1 onClick={toggleDays} className="text">วันพุธ</h1>
             </Link>
-            <Link to="/Monday" className="plain-link">
+            <Link to="/Thursday" className="plain-link">
               <h1 onClick={toggleDays} className="text">วันพฤหัสบดี</h1>
             </Link>
-            <Link to="/Monday" className="plain-link">
+            <Link to="/Friday" className="plain-link">
               <h1 onClick={toggleDays} className="text">วันศุกร์</h1>
             </Link>
-            <Link to="/Monday" className="plain-link">
+            <Link to="/Saturday" className="plain-link">
               <h1 onClick={toggleDays} className="text">วันเสาร์</h1>
             </Link>
-            <Link to="/Monday" className="plain-link">
+            <Link to="/Sunday" className="plain-link">
               <h1 onClick={toggleDays} className="text">วันอาทิตย์</h1>
             </Link>
           </ul>

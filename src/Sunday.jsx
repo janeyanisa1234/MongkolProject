@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShirt } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios';
 
-export default function Monday() {
+export default function Sunday() {
   const [colorsWithDescriptions, setColorsWithDescriptions] = useState([]); // Updated state
   const URL = "https://spooky-spooky-werewolf-pjq5w77r5q6hr457-5001.app.github.dev";
 
@@ -14,7 +14,7 @@ export default function Monday() {
     // Fetch data from backend
     axios.get(`${URL}/tableData`)
       .then(response => {
-        const tableData = response.data.tableData['วันจันทร์'];
+        const tableData = response.data.tableData['วันอาทิตย์'];
         const colorMapping = response.data.colorMapping;
 
         // Create an array to hold color and description
@@ -49,11 +49,11 @@ export default function Monday() {
       <div className="flower-top-right"></div>
 
       <div className="days-menu">
-        <h1 className="text">วันจันทร์</h1>
+        <h1 className="text">วันอาทิตย์</h1>
       </div>
 
       <div>
-        <img className="image-day" src="/public/Pictures/monday.png"  width="400px" height="400px"/>
+        <img className="image-day" src="/public/Pictures/sunday.png"  width="400px" height="400px"/>
       </div>
 
       <div className="color-swatch-container">
