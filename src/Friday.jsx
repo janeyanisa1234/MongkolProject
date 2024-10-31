@@ -8,7 +8,7 @@ import axios from 'axios';
 
 export default function Friday() {
   const [colorsWithDescriptions, setColorsWithDescriptions] = useState([]); // Updated state
-  const URL = "https://spooky-spooky-werewolf-pjq5w77r5q6hr457-5001.app.github.dev";
+  const URL = "https://repulsive-wraith-pjjq5xv465xg2rvv-5000.app.github.dev";
 
   useEffect(() => {
     // Fetch data from backend
@@ -40,43 +40,39 @@ export default function Friday() {
 
   return (
     <>
-      <div className="logopage">
-        <h1>
-          M<img src="/Pictures/sparkling.png" alt="Sparkling" width="20px" height="20" />ngkol
-        </h1>
+      <div className="logopageday">
+        <Link to="/Homepage" className="plain-link">
+          <h1>
+            M<img src="/Pictures/sparkling.png" alt="Sparkling" width="20px" height="20" />ngkol
+          </h1>
+        </Link>
       </div>
       <div className="flower-bottom-left"></div>
       <div className="flower-top-right"></div>
 
       <div className="days-menu">
-        <h1 className="text">วันศุกร์</h1>
+        <h1 className="textday">วันศุกร์</h1>
       </div>
 
       <div>
-        <img className="image-day" src="public/Pictures/friday.png"  width="400px" height="400px"/>
+        <img className="image-day" src="public/Pictures/friday.png" width="400px" height="400px" />
       </div>
 
       <div className="color-swatch-container">
-  {colorsWithDescriptions.map((item, index) => (
-    <div key={index} className="color-swatch">
-      <div className="text">
-        <p style={{ color: item.description === "สีกาลกิณี" ? "red" : "bold" }}>
-          {item.description}
-        </p>
-        <p>{item.label}</p>
-      </div>
-      <div
-        className="circle"
-        style={{ backgroundColor: item.color }}
-      ></div>
-    </div>
-  ))}
-</div>
-
-      <div>
-        <Link to="/Homepage">
-          <button className="buttonBack"><span>&#9664;</span> Home Page</button>
-        </Link>
+        {colorsWithDescriptions.map((item, index) => (
+          <div key={index} className="color-swatch">
+            <div className="text">
+              <p style={{ color: item.description === "สีกาลกิณี" ? "red" : "bold" }}>
+                {item.description}
+              </p>
+              <p>{item.label}</p>
+            </div>
+            <div
+              className="circle"
+              style={{ backgroundColor: item.color }}
+            ></div>
+          </div>
+        ))}
       </div>
     </>
   );

@@ -37,6 +37,18 @@ body {
   background-repeat: no-repeat;
 }
 
+.logopageday {
+  font-size: 10px;
+  color: #f1aa3e;
+  font-family: 'Cinzel Decorative', serif;
+  top: 2px;
+  position: absolute;
+  display: flex-end;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+
 button {
   background-color: #006953;
   /* สีพื้นหลังปุ่ม */
@@ -99,7 +111,6 @@ button:hover {
 }
 
 .plain-link:hover {
-  text-decoration: underline;
   color:#005342;
 }
 
@@ -113,7 +124,7 @@ button:hover {
 
 .days-menu {
   position: absolute;
-  top: 10px;
+  top: 25px;
   left: 150px;
   display: flex; 
   font-size: 25px;
@@ -175,7 +186,7 @@ button:hover {
   padding: 20px;
   margin-left: 500px;
   margin-right: 200px;
-  margin-top: 50px;
+  margin-top: 10px;
   font-size: 20px;
 }
 
@@ -212,18 +223,13 @@ button:hover {
   font-weight: bold;
 }
 
-.buttonBack {
-  background-color: #f5e3a7ef;
-  /* สีพื้นหลังปุ่ม */
-  color: rgb(136, 114, 17);
-  font-size: 20px;
-  text-decoration: none;
-  border-radius: 10px;
-  margin-left: 1200px;
-  margin-bottom: 1000px;
-  display: inline-block;
-  font-family: 'IBM Plex Sans Thai Looped', sans-serif;
-  border: white;
+.textday p {
+  margin: 15px;
+  color: #555;
+}
+
+.textday p:first-child {
+  font-weight: bold;
 }
 
 .credit{

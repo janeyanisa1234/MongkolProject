@@ -8,7 +8,7 @@ import axios from 'axios';
 
 export default function Wednesday() {
   const [colorsWithDescriptions, setColorsWithDescriptions] = useState([]); // Updated state
-  const URL = "https://spooky-spooky-werewolf-pjq5w77r5q6hr457-5001.app.github.dev";
+  const URL = "https://repulsive-wraith-pjjq5xv465xg2rvv-5000.app.github.dev";
 
   useEffect(() => {
     // Fetch data from backend
@@ -40,16 +40,18 @@ export default function Wednesday() {
 
   return (
     <>
-      <div className="logopage">
-        <h1>
-          M<img src="/Pictures/sparkling.png" alt="Sparkling" width="20px" height="20" />ngkol
-        </h1>
+      <div className="logopageday">
+      <Link to="/Homepage" className="plain-link">
+          <h1>
+            M<img src="/Pictures/sparkling.png" alt="Sparkling" width="20px" height="20" />ngkol
+          </h1>
+        </Link>
       </div>
       <div className="flower-bottom-left"></div>
       <div className="flower-top-right"></div>
 
       <div className="days-menu">
-        <h1 className="text">วันพุธ</h1>
+        <h1 className="textday">วันพุธ</h1>
       </div>
 
       <div>
@@ -72,12 +74,6 @@ export default function Wednesday() {
     </div>
   ))}
 </div>
-
-      <div>
-        <Link to="/Homepage">
-          <button className="buttonBack"><span>&#9664;</span> Home Page</button>
-        </Link>
-      </div>
     </>
   );
 }
