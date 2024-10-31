@@ -141,7 +141,7 @@ export default function Homepage() {
       <div className="flower-top-right"></div>
 
       <div className="days-menu">
-        <h1 onClick={toggleDays} className="text">สวัสดี{currentDay}</h1>
+        <h1 onClick={toggleDays} className="greettext">สวัสดี{currentDay}</h1>
 
         {showDays && (
           <ul className="day-options">
@@ -158,7 +158,7 @@ export default function Homepage() {
         )}
       </div>
 
-      <div className="table" style={{ marginTop: '100px', textAlign: 'center', background: 'white',  }}>
+      <div className="table" style={{ marginTop: '70px', textAlign: 'center', background: 'white',  }}>
         <table border="1" style={{ borderCollapse: 'collapse', width: '100%' }}>
           <thead>
             <tr>
@@ -213,7 +213,7 @@ export default function Homepage() {
       </div>
 
       <div>
-      <h2 >สีมงคลเสริมดวงชะตา ประจำปี 2567 หมอไก่ พ.พาทินี</h2>
+      <h2 className="credit">สีมงคลเสริมดวงชะตา ประจำปี 2567 หมอไก่ พ.พาทินี</h2>
       </div>
     </>
   );

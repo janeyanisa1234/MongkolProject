@@ -53,7 +53,7 @@ export default function Monday() {
       </div>
 
       <div class="image-day">
-        <img src="/public/Pictures/image 1.png" alt="Sparkling" width="500px" height="500" />
+        <img src="/public/Pictures/image 1.png" alt="Sparkling" width="400px" height="400" />
       </div>
 
       <div className="color-swatch-container">
@@ -65,7 +65,7 @@ export default function Monday() {
             </div>
             <div
               className="circle"
-              style={{ backgroundColor: item.color }}
+              style={{ backgroundColor: item.color}}
             ></div>
           </div>
         ))}
@@ -74,7 +74,7 @@ export default function Monday() {
       
       <div>
         <Link to="/Homepage">
-          <button className="buttonBack">Home Page <span>&#9654;</span></button>
+          <button className="buttonBack"><span>&#9664;</span> Home Page</button>
         </Link>
       </div>
       
