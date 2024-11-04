@@ -238,6 +238,10 @@ button:hover {
   margin-left: 500px;
 }
 
+.comment{
+  margin-top: 100px;
+}
+
 @media (max-width: 1536px){
   /*Classname*/
   .logopage,

@@ -19,7 +19,7 @@ export default function Homepage() {
   const [colorMapping, setColorMapping] = useState({});
   const [tableData, setTableData] = useState({});
   
-  const URL = "https://repulsive-wraith-pjjq5xv465xg2rvv-5000.app.github.dev";
+  const URL = "https://stunning-yodel-jjqwjpwqxpxr2pj77-5001.app.github.dev";
 
   useEffect(() => {
     axios.get(`${URL}/tableData`)

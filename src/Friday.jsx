@@ -8,7 +8,7 @@ import axios from 'axios';
 
 export default function Friday() {
   const [colorsWithDescriptions, setColorsWithDescriptions] = useState([]); // Updated state
-  const URL = "https://repulsive-wraith-pjjq5xv465xg2rvv-5000.app.github.dev";
+  const URL = "https://stunning-yodel-jjqwjpwqxpxr2pj77-5001.app.github.dev";
 
   useEffect(() => {
     // Fetch data from backend
@@ -43,7 +43,7 @@ export default function Friday() {
       <div className="logopageday">
         <Link to="/Homepage" className="plain-link">
           <h1>
-            M<img src="/Pictures/sparkling.png" alt="Sparkling" width="20px" height="20" />ngkol
+            M<img src="/Pictures/sparkling.png" alt="Sparkling" width="20px" height="20" />ngkol  <img src="/Pictures/back button.png" width="23px" height="23"/>
           </h1>
         </Link>
       </div>
