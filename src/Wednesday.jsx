@@ -8,7 +8,7 @@ import axios from 'axios';
 
 export default function Wednesday() {
   const [colorsWithDescriptions, setColorsWithDescriptions] = useState([]); // Updated state
-  const URL = "https://stunning-yodel-jjqwjpwqxpxr2pj77-5001.app.github.dev";
+  const URL = "https://automatic-capybara-pjg57xq66wp427wpg-5002.app.github.dev";
 
   useEffect(() => {
     // Fetch data from backend
@@ -74,6 +74,9 @@ export default function Wednesday() {
     </div>
   ))}
 </div>
+      {}
+      <div style={{ height: '500px' }}></div> 
+      {}
     </>
   );
 }

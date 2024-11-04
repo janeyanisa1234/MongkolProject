@@ -7,6 +7,8 @@ body {
   align-items: center;
   height: 100vh;
   overflow: hidden;
+  overflow-y: auto; /* Enable vertical scrolling */
+  min-height: 100vh;
 }
 
 .container {
