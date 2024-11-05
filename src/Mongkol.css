@@ -8,7 +8,7 @@ body {
   height: 100vh;
   overflow: hidden;
   overflow-y: auto; /* Enable vertical scrolling */
-  min-height: 100vh;
+  min-height: 150vh;
 }
 
 .container {
@@ -79,6 +79,7 @@ button:hover {
   position: absolute;
   background-size: contain;
   background-repeat: no-repeat;
+  position: fixed;
 }
 
 .flower-bottom-left {
@@ -91,7 +92,7 @@ button:hover {
   bottom: -100px;
   left: -180px;
   margin: 10px;
-
+  position: fixed;
 }
 
 .flower-top-right {
@@ -104,6 +105,7 @@ button:hover {
   top: -100px;
   right: -250px;
   margin: 10px;
+  position: fixed;
 }
 
 .plain-link {
@@ -172,12 +174,12 @@ button:hover {
 }
 
 .image-day{
-  position: fixed; 
   top: 130px; 
   right: 1000px; 
   display: flex;
   align-items: center;
   z-index: 1000; 
+  
 }
 
 .color-swatch-container {
@@ -240,8 +242,18 @@ button:hover {
   margin-left: 500px;
 }
 
-.comment{
-  margin-top: 100px;
+.comment-section button {
+  font-size: 13px;
+  max-width: 250px;  
+  min-width: 100px;  
+  padding: 10px;
+  background-color:cadetblue;
+}
+
+.comments-list{
+background-color:white;
+max-width: 200px;  
+min-width: 90px;
 }
 
 @media (max-width: 1536px){
