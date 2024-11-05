@@ -12,7 +12,7 @@ export default function Thursday() {
   const [newComment, setNewComment] = useState("");
   const [editingCommentIndex, setEditingCommentIndex] = useState(null);
   const [editedComment, setEditedComment] = useState("");
-  const URL = "https://organic-guacamole-x59grjq4454qcv45p-5003.app.github.dev";
+  const URL = "https://redesigned-acorn-v6wvxx4rx4j36jj-5002.app.github.dev";
 
   useEffect(() => {
     // Fetch data for colors and initial comments
@@ -96,7 +96,7 @@ export default function Thursday() {
       <div className="logopageday">
         <Link to="/Homepage" className="plain-link">
           <h1>
-            M<img src="/Pictures/sparkling.png" alt="Sparkling" width="20px" height="20" />ngkol <img src="/Pictures/back button.png" width="23px" height="23"/>
+            M<img src="/Pictures/sparkling.png" alt="Sparkling" width="20px" height="20" />ngkol 
           </h1>
         </Link>
       </div>
@@ -166,13 +166,16 @@ export default function Thursday() {
               <p>{comment.comment}</p>
               <button onClick={() => handleEditClick(index)}>แก้ไข</button>
               <button onClick={() => handleDeleteClick(index)}>ลบ</button>
+              <hr style={{height: "1px", backgroundColor: "grey"}}></hr>
             </div>
           ))}
         </div>
       </div>
-
-      {/* Additional space to ensure scrolling */}
-      <div style={{ height: '500px' }}></div>
+      <div>
+        <Link to="/Homepage">
+          <button className="buttonBack"><span>&#9664;</span> กลับสู่หน้าหลัก</button>
+        </Link>
+      </div>
     </>
   );
 }

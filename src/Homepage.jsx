@@ -19,7 +19,7 @@ export default function Homepage() {
   const [colorMapping, setColorMapping] = useState({});
   const [tableData, setTableData] = useState({});
   
-  const URL = "https://organic-guacamole-x59grjq4454qcv45p-5003.app.github.dev";
+  const URL = "https://redesigned-acorn-v6wvxx4rx4j36jj-5002.app.github.dev";
 
   useEffect(() => {
     axios.get(`${URL}/tableData`)
