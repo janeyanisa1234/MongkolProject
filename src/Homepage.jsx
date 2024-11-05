@@ -5,13 +5,6 @@ import '@fontsource/ibm-plex-sans-thai';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faShirt } from '@fortawesome/free-solid-svg-icons';
 import axios from 'axios'; // เพิ่มการ import axios
-import Monday from "./Monday";
-import Tuesday from "./Tuesday";
-import Wednesday from "./Wednesday";
-import Thursday from "./Thursday";
-import Friday from "./Friday";
-import Saturday from "./Saturday";
-import Sunday from "./Sunday";
 
 export default function Homepage() {
   const [showDays, setShowDays] = useState(false);
