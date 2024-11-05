@@ -8,14 +8,19 @@ import axios from 'axios';
 
 export default function Thursday() {
   const [colorsWithDescriptions, setColorsWithDescriptions] = useState([]);
-  const [comments, setComments] = useState([]); // State for comments
-  const [newComment, setNewComment] = useState(""); // State for new comment input
-  const [editingCommentIndex, setEditingCommentIndex] = useState(null); // For tracking which comment is being edited
-  const [editedComment, setEditedComment] = useState(""); // For storing the edited comment
-  const URL = "https://automatic-capybara-pjg57xq66wp427wpg-5002.app.github.dev";
+  const [comments, setComments] = useState([]);
+  const [newComment, setNewComment] = useState("");
+  const [editingCommentIndex, setEditingCommentIndex] = useState(null);
+  const [editedComment, setEditedComment] = useState("");
+  const URL = "https://organic-guacamole-x59grjq4454qcv45p-5003.app.github.dev";
 
   useEffect(() => {
-    // Fetch data from backend
+    // Fetch data for colors and initial comments
+    fetchColors();
+    fetchComments();
+  }, []);
+
+  const fetchColors = () => {
     axios.get(`${URL}/tableData`)
       .then(response => {
         const tableData = response.data.tableData['วันพฤหัสบดี'];
@@ -34,46 +39,56 @@ export default function Thursday() {
         }
         setColorsWithDescriptions(colorsArray);
       })
-      .catch(error => {
-        console.error("Error fetching table data:", error);
-      });
-  }, []);
-
-  const handleCommentChange = (e) => {
-    setNewComment(e.target.value);
+      .catch(error => console.error("Error fetching table data:", error));
   };
 
-  const handleCommentSubmit = (e) => {
+  const fetchComments = () => {
+    axios.get(`${URL}/data`)
+      .then(response => setComments(response.data))
+      .catch(error => console.error("Error fetching comments:", error));
+  };
+
+  const handleCommentSubmit = async (e) => {
     e.preventDefault();
     if (newComment.trim()) {
-      setComments([...comments, newComment]);
-      setNewComment(""); // Clear input after submitting
+      try {
+        await axios.post(`${URL}/insert`, { comment: newComment });
+        setNewComment("");
+        fetchComments(); // Refresh comments immediately after insert
+      } catch (error) {
+        console.error("Error inserting comment:", error);
+      }
     }
   };
 
   const handleEditClick = (index) => {
-    setEditingCommentIndex(index); // Set the index of the comment being edited
-    setEditedComment(comments[index]); // Pre-fill the textarea with the comment to edit
+    setEditingCommentIndex(index);
+    setEditedComment(comments[index].comment);
   };
 
-  const handleEditChange = (e) => {
-    setEditedComment(e.target.value); // Update the edited comment
-  };
-
-  const handleEditSubmit = (e) => {
+  const handleEditSubmit = async (e) => {
     e.preventDefault();
     if (editedComment.trim()) {
-      const updatedComments = [...comments];
-      updatedComments[editingCommentIndex] = editedComment; // Replace the comment at the specified index
-      setComments(updatedComments);
-      setEditingCommentIndex(null); // Reset the editing state
-      setEditedComment(""); // Clear the edit input
+      try {
+        const commentId = comments[editingCommentIndex]._id;
+        await axios.put(`${URL}/update/${commentId}`, { comment: editedComment });
+        setEditingCommentIndex(null);
+        setEditedComment("");
+        fetchComments(); // Refresh comments immediately after update
+      } catch (error) {
+        console.error("Error updating comment:", error);
+      }
     }
   };
 
-  const handleDeleteClick = (index) => {
-    const updatedComments = comments.filter((_, i) => i !== index); // Remove the comment at the specified index
-    setComments(updatedComments);
+  const handleDeleteClick = async (index) => {
+    try {
+      const commentId = comments[index]._id;
+      await axios.delete(`${URL}/delete/${commentId}`);
+      fetchComments(); // Refresh comments immediately after delete
+    } catch (error) {
+      console.error("Error deleting comment:", error);
+    }
   };
 
   return (
@@ -89,7 +104,7 @@ export default function Thursday() {
       <div className="flower-top-right"></div>
 
       <div className="days-menu">
-        <h1 className="textday">วันพฤหัสบดี</h1>
+        <h1 className="textday">พฤหัสบดี</h1>
       </div>
 
       <div>
@@ -118,11 +133,11 @@ export default function Thursday() {
         <h2>แสดงความคิดเห็น</h2>
         
         {/* Add Comment Form */}
-        {!editingCommentIndex && (
+        {editingCommentIndex === null && (
           <form onSubmit={handleCommentSubmit}>
             <textarea
               value={newComment}
-              onChange={handleCommentChange}
+              onChange={(e) => setNewComment(e.target.value)}
               placeholder="เพิ่มข้อความที่นี่..."
               rows="4"
               required
@@ -136,7 +151,7 @@ export default function Thursday() {
           <form onSubmit={handleEditSubmit}>
             <textarea
               value={editedComment}
-              onChange={handleEditChange}
+              onChange={(e) => setEditedComment(e.target.value)}
               placeholder="แก้ไขความคิดเห็น"
               rows="4"
               required
@@ -147,8 +162,8 @@ export default function Thursday() {
 
         <div className="comments-list">
           {comments.map((comment, index) => (
-            <div key={index} className="comment">
-              <p>{comment}</p>
+            <div key={comment._id} className="comment">
+              <p>{comment.comment}</p>
               <button onClick={() => handleEditClick(index)}>แก้ไข</button>
               <button onClick={() => handleDeleteClick(index)}>ลบ</button>
             </div>

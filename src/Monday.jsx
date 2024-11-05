@@ -12,7 +12,7 @@ export default function Monday() {
   const [newComment, setNewComment] = useState("");
   const [editingCommentIndex, setEditingCommentIndex] = useState(null);
   const [editedComment, setEditedComment] = useState("");
-  const URL = "https://jubilant-guide-x55qgj67qwqwfp4v4-5002.app.github.dev";
+  const URL = "https://organic-guacamole-x59grjq4454qcv45p-5003.app.github.dev";
 
   useEffect(() => {
     // Fetch data for colors and initial comments
